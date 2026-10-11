@@ -1,0 +1,43 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+.magic-button {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
+}
+
+.magic-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(229, 46, 113, 0.6);
+    background-position: right center;
+}
+
+.magic-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    transition: left 0.5s;
+}
+
+.magic-button:hover::before {
+    left: 125%;
+}
